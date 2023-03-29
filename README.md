@@ -8,3 +8,13 @@ Contribute code improvements or new features through pull requests.
 Improve the documentation or add new examples to help others understand the project.
 Spread the word about the project and encourage others to get involved.
 No matter how you choose to contribute, your help is greatly appreciated. Thank you for your interest in making the Clean Architecture Microservices Example project even better!
+
+```
+Download the project
+git clone https://github.com/CarlosDnlOspina/clean-architecture-microservices-example.git
+```
+
+```
+Start the project 
+go run cmd/app/main.go    
+```
