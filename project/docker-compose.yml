@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+
+  authentication-service:
+    build:
+      context: ./../auth-service
+      dockerfile: ./../auth-service/authentication-service.dockerfile
+    restart: always
+    ports:
+      - "8080:8080"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      PG_URL: "postgresql://root@cockroachdb-public:26257/authdb?sslmode=disable"
+
+  cockroach:
+    image: cockroachdb/cockroach:v21.2.11
+    command: start-single-node --insecure
+    ports:
+      - "26257:26257"
+    volumes:
+      - "./cockroach-data:/cockroach/cockroach-data"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      - COCKROACH_CHANNEL=1
+      - COCKROACH_HEAP_INMB=128
+      - COCKROACH_MAX_HEAP_INMB=256
+      - COCKROACH_CACHE=256MiB
+      - COCKROACH_MAX_SQL_MEMORY=128MiB
+      - COCKROACH_SQL_MEMORY_POOL_SIZE=256MiB
+
+  mongo:
+    image: 'mongo:4.2.16-bionic'
+    ports:
+      - "27030:27017"
+    environment:
+      MONGO_INITDB_DATABASE: logs
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./db-data/mongo/:/data/db
+
