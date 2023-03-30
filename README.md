@@ -13,25 +13,30 @@ No matter how you choose to contribute, your help is greatly appreciated. Thank 
 
 To get started, please ensure you have the following tools installed on your system:
 
-Docker: You should have Docker installed on your system. (recommended version: 20.10.9 or later) 🐳
-Docker Compose: You should have Docker Compose installed on your system. (recommended version: 1.29.2 or later) 🚀
-Make: You should have Make installed on your system. (recommended version: 4.3 or later) 🛠️
-To install and run the project, please follow these steps:
+- **Docker**: You should have Docker installed on your system. (recommended version: 20.10.9 or later) 🐳
+
+- **Docker Compose**: You should have Docker Compose installed on your system. (recommended version: 1.29.2 or later) 
+
+- **Make**: You should have Make installed on your system. (recommended version: 4.3 or later) 🛠️
+
+### To install and run the project, please follow these steps:
 
 
+#### Download the project:
 ```
-Download the project:
 git clone https://github.com/CarlosDnlOspina/clean-architecture-microservices-example.git
 
 ```
 
+
+#### Change into the project directory
 ```
-Change into the project directory
+
 cd clean-architecture-microservices-example/project
 ```
 
+#### Build the project
 ```
-Build the project
 make up_build
 ```
 
