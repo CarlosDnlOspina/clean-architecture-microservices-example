@@ -9,7 +9,7 @@ Improve the documentation or add new examples to help others understand the proj
 Spread the word about the project and encourage others to get involved.
 No matter how you choose to contribute, your help is greatly appreciated. Thank you for your interest in making the Clean Architecture Microservices Example project even better! 😊
 
-#Requirements
+## Requirements
 
 To get started, please ensure you have the following tools installed on your system:
 
@@ -34,7 +34,5 @@ cd clean-architecture-microservices-example/project
 Build the project
 make up_build
 ```
-
-
 
 
