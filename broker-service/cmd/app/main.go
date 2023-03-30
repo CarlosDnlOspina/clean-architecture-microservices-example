@@ -11,5 +11,5 @@ func main() {
 	payloadHandler := payload.NewHandler(payloadSvc)
 	router.InitRouter(payloadHandler)
 
-	router.Start("0.0.0.0:8080")
+	router.Start("0.0.0.0:5772")
 }
