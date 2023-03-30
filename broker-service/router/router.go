@@ -17,6 +17,7 @@ func InitRouter(payload *payload.Handler) {
 	{
 		//h.POST("/handler", userHandler.CreateUser)
 		h.GET("/broker", payload.Broker)
+		h.POST("/handler", payload.Authenticate)
 	}
 }
 
