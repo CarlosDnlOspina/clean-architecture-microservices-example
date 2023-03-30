@@ -1,5 +1,6 @@
 AUTH_BINARY=authApp
 AUTH_BINARY=brokerApp
+as
 ## up: starts all containers in the background without forcing build
 up:
 	@echo "Starting Docker images..."
